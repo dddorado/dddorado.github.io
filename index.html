@@ -258,8 +258,15 @@ select {
   width: 100%;
 }
 
-.appointments-card {
-  margin-top: 1.5rem;
+.about-grid {
+  grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+  align-items: start;
+}
+
+.about-column,
+.stack {
+  display: grid;
+  gap: 1.5rem;
 }
 
 .eyebrow {
@@ -455,16 +462,6 @@ p {
 
 .section-heading > p:last-child {
   color: var(--muted);
-}
-
-.about-grid {
-  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
-  align-items: start;
-}
-
-.stack {
-  display: grid;
-  gap: 1.5rem;
 }
 
 .split-grid {
@@ -1643,24 +1640,31 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
 
           <div class="about-grid">
-            <article class="card prose-card">
-              <h3>Biography</h3>
-              <p>
-                At UP SLIS, he teaches information technology, management and marketing,
-                research methodology, and quantitative research. He previously served as Director
-                of the Diliman Learning Resource Center under the Office of the Vice Chancellor
-                for Student Affairs and, before joining the faculty, worked as Information
-                Specialist at the UP College of Engineering Library with responsibility for system
-                and network administration and The Learning Commons.
-              </p>
-              <p>
-                He completed his Master of Technology Management at UP Diliman and is currently
-                pursuing a PhD in Data Science. His research specialization, as described in the
-                resume, covers computational methods, open education, critical data studies, and
-                radical statistics, with related work in AI in libraries, tourism analytics,
-                digital humanities, and research data management.
-              </p>
-            </article>
+            <div class="about-column">
+              <article class="card prose-card">
+                <h3>Biography</h3>
+                <p>
+                  At UP SLIS, he teaches information technology, management and marketing,
+                  research methodology, and quantitative research. He previously served as Director
+                  of the Diliman Learning Resource Center under the Office of the Vice Chancellor
+                  for Student Affairs and, before joining the faculty, worked as Information
+                  Specialist at the UP College of Engineering Library with responsibility for system
+                  and network administration and The Learning Commons.
+                </p>
+                <p>
+                  He completed his Master of Technology Management at UP Diliman and is currently
+                  pursuing a PhD in Data Science. His research specialization, as described in the
+                  resume, covers computational methods, open education, critical data studies, and
+                  radical statistics, with related work in AI in libraries, tourism analytics,
+                  digital humanities, and research data management.
+                </p>
+              </article>
+
+              <article class="card appointments-card">
+                <h3>Professional appointments</h3>
+                <div class="timeline-list" id="appointments-list"></div>
+              </article>
+            </div>
 
             <div class="stack">
               <article class="card">
@@ -1679,11 +1683,6 @@ document.addEventListener("DOMContentLoaded", () => {
               </article>
             </div>
           </div>
-
-          <article class="card appointments-card">
-            <h3>Professional appointments</h3>
-            <div class="timeline-list" id="appointments-list"></div>
-          </article>
         </div>
       </section>
 
