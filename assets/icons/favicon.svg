@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Dan Anthony Dorado monogram">
+  <rect width="64" height="64" rx="14" fill="#17313d"/>
+  <path d="M18 16h12c10 0 16 6 16 16s-6 16-16 16H18z" fill="none" stroke="#f3efe7" stroke-width="4"/>
+  <path d="M24 22h6c6 0 10 4 10 10s-4 10-10 10h-6z" fill="none" stroke="#d7e0de" stroke-width="3"/>
+  <circle cx="48" cy="20" r="4" fill="#d7e0de"/>
+</svg>

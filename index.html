@@ -1,0 +1,1884 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dan Anthony Dorado | Academic Portfolio</title>
+    <meta
+      name="description"
+      content="Academic portfolio of Dan Anthony Dorado, Assistant Professor at the UP School of Library and Information Studies, with work spanning teaching, research, projects, thesis advising, and public engagement."
+    >
+    <meta name="theme-color" content="#17313d">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dan Anthony Dorado | Academic Portfolio">
+    <meta
+      property="og:description"
+      content="Teaching, research, publications, grants, advising, and engagements in library and information science, data science, open education, and AI in libraries."
+    >
+    <meta property="og:url" content="https://dddorado.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dan Anthony Dorado | Academic Portfolio">
+    <meta
+      name="twitter:description"
+      content="Assistant Professor at the UP School of Library and Information Studies."
+    >
+    <link rel="canonical" href="https://dddorado.github.io/">
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+    <style>
+:root {
+  --bg: #f3efe7;
+  --bg-alt: #ebe6dc;
+  --surface: #fffdf9;
+  --surface-strong: #f9f6f0;
+  --text: #17222a;
+  --muted: #4c5a63;
+  --accent: #17313d;
+  --accent-soft: #d7e0de;
+  --line: rgba(23, 49, 61, 0.12);
+  --shadow: 0 20px 45px rgba(23, 49, 61, 0.08);
+  --radius: 1.25rem;
+  --max: 75rem;
+  --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "URW Palladio L", Georgia, serif;
+  --sans: "Aptos", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(215, 224, 222, 0.8), transparent 28rem),
+    linear-gradient(180deg, #f7f4ed 0%, var(--bg) 100%);
+  line-height: 1.65;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.15em;
+}
+
+a:hover,
+a:focus-visible {
+  color: #0f5762;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.container {
+  width: min(calc(100% - 2rem), var(--max));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 5.5rem 0;
+}
+
+.section-alt {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.12)),
+    var(--bg-alt);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+  background: rgba(243, 239, 231, 0.88);
+  border-bottom: 1px solid var(--line);
+}
+
+.header-shell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 4.75rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+}
+
+.brand-text {
+  display: grid;
+}
+
+.brand-text strong {
+  font-size: 0.98rem;
+}
+
+.brand-text span {
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.95rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.site-nav a.is-current,
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: var(--accent);
+}
+
+.nav-cta {
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+}
+
+.menu-toggle {
+  display: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  background: #fffaf2;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 1.5rem 0 auto;
+  height: 24rem;
+  background-image:
+    linear-gradient(rgba(23, 49, 61, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 49, 61, 0.06) 1px, transparent 1px);
+  background-size: 2.5rem 2.5rem;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), transparent 85%);
+  pointer-events: none;
+}
+
+.hero-grid,
+.about-grid,
+.split-grid,
+.footer-grid,
+.contact-card {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero-grid {
+  grid-template-columns: minmax(0, 1.15fr) minmax(20rem, 1fr);
+  align-items: start;
+}
+
+.hero-copy {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.hero-media {
+  margin: 0;
+  width: min(100%, 24rem);
+  justify-self: center;
+}
+
+.hero-photo-card {
+  margin: 0;
+  overflow: hidden;
+  border-radius: calc(var(--radius) + 0.1rem);
+  border: 1px solid rgba(23, 49, 61, 0.09);
+  box-shadow: var(--shadow);
+  background: rgba(255, 253, 249, 0.92);
+}
+
+.hero-photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  height: auto;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.hero-photo-single {
+  width: 100%;
+}
+
+.appointments-card {
+  margin-top: 1.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--serif);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 4vw, 4.4rem);
+  max-width: 12ch;
+}
+
+h2 {
+  font-size: clamp(2rem, 2.4vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.05rem;
+}
+
+p {
+  margin: 0;
+}
+
+.lead {
+  font-size: 1.18rem;
+  max-width: 46rem;
+  color: #22333c;
+}
+
+.summary {
+  margin-top: 1rem;
+  max-width: 42rem;
+  color: var(--muted);
+}
+
+.hero-actions,
+.quick-links,
+.tag-row,
+.chip-list,
+.footer-links,
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.hero-actions {
+  margin: 1.8rem 0 1.3rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.9rem;
+  padding: 0.85rem 1.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.button-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.button-secondary {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--accent);
+}
+
+.quick-links,
+.footer-links,
+.contact-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-links a,
+.footer-links a,
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  padding: 0.2rem 0;
+}
+
+.hero-panel,
+.card,
+.feature-card,
+.project-card,
+.teaching-card,
+.advising-card,
+.highlight-card,
+.service-card,
+.contact-card,
+.list-shell,
+.talk-item,
+.publication-item {
+  background: rgba(255, 253, 249, 0.88);
+  border: 1px solid rgba(23, 49, 61, 0.09);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero-panel,
+.card,
+.project-card,
+.teaching-card,
+.advising-card,
+.highlight-card,
+.service-card,
+.list-shell,
+.talk-item,
+.publication-item {
+  padding: 1.35rem;
+}
+
+.hero-panel {
+  position: relative;
+  padding: 1.5rem;
+  background:
+    linear-gradient(160deg, rgba(23, 49, 61, 0.06), rgba(255, 255, 255, 0.7)),
+    var(--surface);
+}
+
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(120deg, transparent 0%, rgba(23, 49, 61, 0.07) 100%);
+  pointer-events: none;
+}
+
+.panel-block + .panel-block,
+.timeline-item + .timeline-item,
+.list-item + .list-item,
+.course-item + .course-item,
+.service-item + .service-item {
+  border-top: 1px solid var(--line);
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.panel-label,
+.meta,
+.muted {
+  color: var(--muted);
+}
+
+.panel-label,
+.meta {
+  font-size: 0.84rem;
+  letter-spacing: 0.04em;
+}
+
+.panel-value {
+  margin-top: 0.2rem;
+  font-weight: 600;
+}
+
+.section-heading {
+  max-width: 52rem;
+  margin-bottom: 2rem;
+}
+
+.section-heading.compact {
+  margin-bottom: 1.5rem;
+}
+
+.section-heading > p:last-child {
+  color: var(--muted);
+}
+
+.about-grid {
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  align-items: start;
+}
+
+.stack {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.split-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1.5rem;
+}
+
+.prose-card p + p {
+  margin-top: 1rem;
+}
+
+.skill-groups,
+.credential-list,
+.timeline-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.skill-group h4,
+.list-item h4,
+.timeline-item h4,
+.service-item h4 {
+  margin-bottom: 0.35rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.28rem 0.8rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.92rem;
+}
+
+.highlight-grid,
+.feature-grid,
+.project-grid,
+.service-groups {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.highlight-grid,
+.feature-grid,
+.project-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.feature-card {
+  padding: 1.5rem;
+  border-top: 4px solid var(--accent);
+}
+
+.list-shell {
+  margin-top: 1.5rem;
+}
+
+.subheading {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.publication-list,
+.teaching-groups,
+.advising-list,
+.talk-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.publication-item h3,
+.talk-item h3,
+.project-card h3,
+.advising-card h3,
+.highlight-card h3,
+.feature-card h3 {
+  margin: 0.45rem 0 0.7rem;
+}
+
+.project-card,
+.advising-card,
+.talk-item {
+  height: 100%;
+}
+
+.pill {
+  display: inline-flex;
+  margin-top: 0.9rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(23, 49, 61, 0.08);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.teaching-groups {
+  gap: 1.5rem;
+}
+
+.teaching-header {
+  margin-bottom: 0.6rem;
+}
+
+.course-item h3 {
+  font-size: 1.12rem;
+  margin-bottom: 0.45rem;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.54);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+}
+
+.toolbar label {
+  display: grid;
+  gap: 0.4rem;
+  min-width: 11rem;
+}
+
+.toolbar span {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.toolbar select,
+.toolbar input {
+  min-height: 2.85rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid rgba(23, 49, 61, 0.18);
+  border-radius: 0.8rem;
+  background: #fffdf9;
+}
+
+.search-field {
+  flex: 1 1 18rem;
+}
+
+.advising-list,
+.talk-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.contact-card {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 1.5rem;
+}
+
+.site-footer {
+  padding: 2.25rem 0 3rem;
+  border-top: 1px solid var(--line);
+  background: rgba(23, 49, 61, 0.06);
+}
+
+.footer-grid {
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.footer-title {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  margin-bottom: 0.55rem;
+}
+
+.noscript-note {
+  padding: 1rem;
+  text-align: center;
+  background: #fff4d8;
+  border-top: 1px solid rgba(23, 49, 61, 0.18);
+}
+
+@media (max-width: 70rem) {
+  .hero-grid,
+  .about-grid,
+  .highlight-grid,
+  .feature-grid,
+  .project-grid,
+  .advising-list,
+  .talk-list,
+  .split-grid,
+  .contact-card,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 56rem) {
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 1rem;
+    left: 1rem;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    background: rgba(255, 253, 249, 0.98);
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .site-nav a {
+    padding: 0.3rem 0;
+  }
+
+  .nav-cta {
+    justify-content: center;
+    margin-top: 0.4rem;
+  }
+
+  h1 {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 40rem) {
+  .section {
+    padding: 4.25rem 0;
+  }
+
+  .header-shell {
+    min-height: 4.25rem;
+  }
+
+  .hero-actions,
+  .quick-links,
+  .toolbar {
+    gap: 0.75rem;
+  }
+
+  .toolbar label,
+  .search-field {
+    min-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+</style>
+    <script>
+window.portfolioData = {
+  highlights: [
+    {
+      title: "Research across LIS, data, and critical methods",
+      text: "Research interests named in the resume include computational methods, open education, critical data studies, radical statistics, tourism analytics, and AI in libraries."
+    },
+    {
+      title: "Teaching from information systems to digital scholarship",
+      text: "Coursework spans ICT in LIS, management and marketing, quantitative research, project management, digital humanities, digital scholarship, and research data management."
+    },
+    {
+      title: "Public engagement through talks, workshops, and conference work",
+      text: "The resume documents invited talks and conference presentations on AI, libraries, education, cultural work, tourism analytics, and scholarly communication."
+    }
+  ],
+  education: [
+    {
+      dates: "2023/08 - present",
+      degree: "PhD in Data Science",
+      institution: "University of the Philippines Diliman"
+    },
+    {
+      dates: "2012/06 - 2016/04",
+      degree: "Master of Technology Management",
+      institution: "University of the Philippines Diliman"
+    },
+    {
+      dates: "2003/06 - 2009/04",
+      degree: "Bachelor of Library and Information Science",
+      institution: "University of the Philippines Diliman"
+    }
+  ],
+  researchInterests: [
+    "Computational methods",
+    "Open education",
+    "Critical data studies",
+    "Radical statistics",
+    "AI in libraries",
+    "Tourism analytics",
+    "Data science",
+    "Digital scholarship",
+    "Digital humanities",
+    "Research data management"
+  ],
+  skills: [
+    {
+      title: "Programming and development",
+      items: ["R", "Python", "PHP", "HTML", "CSS", "JavaScript", "Django", "Flask", "Spring"]
+    },
+    {
+      title: "Data, databases, and visualization",
+      items: ["MySQL", "PostgreSQL", "MongoDB", "Excel", "Tableau", "RStudio"]
+    },
+    {
+      title: "Infrastructure and platforms",
+      items: ["GitHub", "GitLab", "Linux/Unix system administration", "AWS", "Azure", "Google Cloud Platform", "Network administration and configuration", "CompTIA Network++"]
+    }
+  ],
+  appointments: [
+    {
+      dates: "2012/06 - present",
+      title: "Assistant Professor",
+      organization: "UP School of Library and Information Studies",
+      note: "Full-time faculty appointment."
+    },
+    {
+      dates: "2020/08 - 2023/06",
+      title: "Director",
+      organization: "Diliman Learning Resource Center, Office of the Vice Chancellor for Student Affairs",
+      note: "Leadership role in learning resource development."
+    },
+    {
+      dates: "2009/06 - 2011/12",
+      title: "Information Specialist",
+      organization: "UP College of Engineering Library",
+      note: "Handled system and network administration and The Learning Commons."
+    }
+  ],
+  credentials: [
+    {
+      title: "Ethical Conduct for Research Involving Humans (TCPS 2: CORE 2022)",
+      note: "Certificate #0001538584, dated 8 February 2026"
+    }
+  ],
+  teachingGroups: [
+    {
+      theme: "Information technology and systems",
+      courses: [
+        {
+          code: "LIS 131",
+          title: "Media Materials and Technology",
+          description: "Evaluation, acquisition, organization, and use of media materials and technology in libraries and information centers."
+        },
+        {
+          code: "LIS 160",
+          title: "Information and Communications Technology in LIS I",
+          description: "Theories, principles, components and issues of ICT and its applications in LIS."
+        },
+        {
+          code: "LIS 161",
+          title: "Information and Communications Technology in LIS II",
+          description: "Fundamentals of information storage and retrieval systems, database management systems and programming in LIS."
+        },
+        {
+          code: "LIS 164",
+          title: "Telecommunications and Networks for Library and Information Science",
+          description: "Use of telecommunications and networks for information access and dissemination for library and information science."
+        },
+        {
+          code: "LIS 260",
+          title: "Introduction to Information Systems",
+          description: "Overview of the basic functions of information storage and retrieval systems, including user studies, current awareness services, SDI, information marketing, and survey of major information systems."
+        }
+      ]
+    },
+    {
+      theme: "Management, marketing, and project work",
+      courses: [
+        {
+          code: "LIS 151",
+          title: "Library Management I",
+          description: "Basic theories and principles of management for effective library service."
+        },
+        {
+          code: "LIS 152",
+          title: "Library Management II",
+          description: "Theories and principles of management as applied to various types of libraries and information centers."
+        },
+        {
+          code: "LIS 158",
+          title: "Marketing Library and Information Services",
+          description: "Marketing approaches for library and information services."
+        },
+        {
+          code: "LIS 198",
+          title: "Introduction to Knowledge Management",
+          description: "Knowledge management in theory and practice."
+        },
+        {
+          code: "LIS 256",
+          title: "Project Management for Library and Information Professionals",
+          description: "Examination of tools, techniques, and methods of project management for library and information professionals in galleries, libraries, archives, and museums."
+        }
+      ]
+    },
+    {
+      theme: "Research and methods",
+      courses: [
+        {
+          code: "LIS 190",
+          title: "Statistical Techniques in Library Information Science",
+          description: "Statistics for the analysis of research data in library and information science."
+        },
+        {
+          code: "LIS 192",
+          title: "Quantitative Research in Library and Information Science",
+          description: "Quantitative paradigms, theories, and methods used in information research."
+        },
+        {
+          code: "LIS 199",
+          title: "Research in Library and Information Science",
+          description: "Principles, methods and problems of research with practical application to librarianship and information science."
+        },
+        {
+          code: "LIS 299",
+          title: "Research Methodology",
+          description: "Research methodology in LIS."
+        }
+      ]
+    },
+    {
+      theme: "Digital humanities, digital scholarship, and data management",
+      courses: [
+        {
+          code: "LIS 198",
+          title: "Introduction to Digital Humanities",
+          description: "Explores the contours of digital humanities and its intersections with literary studies and library and information science."
+        },
+        {
+          code: "LIS 198",
+          title: "Digital Scholarship",
+          description: "Explores the intersection of digital content, networked distribution, and open practices and how it affects scholarship."
+        },
+        {
+          code: "LIS 198",
+          title: "Research Data Management",
+          description: "Introduces the diversity of data, data lifecycle practices, and components of good data management plans."
+        }
+      ]
+    },
+    {
+      theme: "Civic and student engagement",
+      courses: [
+        {
+          code: "CWTS 1",
+          title: "Civic Welfare Training Service 1",
+          description: "Enhances civic consciousness by developing service and commitment for the welfare and betterment of communities."
+        },
+        {
+          code: "CWTS 2",
+          title: "Civic Welfare Training Service 2",
+          description: "Builds physical, moral, spiritual, intellectual, and social well-being while promoting service ethics and defense preparedness."
+        }
+      ]
+    }
+  ],
+  publications: [
+    {
+      featured: true,
+      year: "2024",
+      title: "Exploring the landscape of librarianship in the Philippines: Establishing the profession's population parameter estimates",
+      venue: "Journal of Librarianship and Information Science"
+    },
+    {
+      featured: true,
+      year: "2023",
+      title: "Bridging the Gap: UPSLIS as a Catalysts for Reproducible Research and Data Literacy",
+      venue: "Asia Pacific Library and Information Science Education and Practice Conference Proceedings"
+    },
+    {
+      featured: false,
+      year: "2021",
+      title: "Philippine Librarians Census",
+      venue: "Zenodo",
+      link: "https://doi.org/10.5281/zenodo.6864788"
+    },
+    {
+      featured: true,
+      year: "2020",
+      title: "A Study on the Perception of Filipino Librarians on Innovation",
+      venue: "Philippine Journal of Library and Information Studies",
+      link: "http://phjlis.org/index.php/phjlis/article/view/24"
+    },
+    {
+      featured: true,
+      year: "2019",
+      title: "Sexual Information Behavior of Filipino University Students",
+      venue: "Information in Contemporary Society. iConference 2019. Lecture Notes in Computer Science, vol. 11420. Springer",
+      link: "https://doi.org/10.1007/978-3-030-15742-5_28"
+    },
+    {
+      featured: false,
+      year: "2017",
+      title: "An Economic Valuation of the Quezon City Public Library - Main: A Mixed Methods Approach on a Total Economic Value Framework",
+      venue: "Paper presented at IFLA WLIC 2018, Kuala Lumpur, Malaysia, Session 182 - Africa with ATINA SIG",
+      link: "http://library.ifla.org/id/eprint/2233"
+    }
+  ],
+  projects: [
+    {
+      dates: "2025/06 - 2026/05",
+      title: "From Stacks to Sensors: IoT-Driven Innovations in Library and Archives",
+      funder: "UP Diliman Extension Grant, Office of the Vice Chancellor for Research and Development",
+      role: "Project Manager"
+    },
+    {
+      dates: "2024/05 - 2025/04",
+      title: "MITRE: Mutual Information and TRansfer Entropy for Tourism Analytics",
+      funder: "UP System-wide CRL Research Grant",
+      role: "Project Leader"
+    },
+    {
+      dates: "2022/07 - 2022/12",
+      title: "Philippine Journal Citation Index Database Project",
+      funder: "Commission on Higher Education",
+      role: "Project Associate (Quality Assurance Officer)"
+    },
+    {
+      dates: "2022/01 - 2022/07",
+      title: "Development of Online Multimedia Interactive Materials Project",
+      funder: "Interactive Learning Center Diliman, Office of the Vice Chancellor for Academic Affairs",
+      role: "Project Manager"
+    }
+  ],
+  advising: [
+    { year: "2024", title: "Perceptions of Reference Librarians on the Factors that Affect Their Acceptance of Adopting ChatGPT in Virtual Reference Services", name: "Tayamora, Pamela May", level: "Undergraduate thesis" },
+    { year: "2024", title: "Chatting About Bots: Investigating the Challenges and Opportunities for Integrating AI Chatbots into Library Systems at the University of the Philippines Diliman", name: "Julongbayan, Rad", level: "Undergraduate thesis" },
+    { year: "2024", title: "A Proposed Assessment Tool for Measuring the Spatial Accessibility of Libraries in the Philippines Using Enhanced 2-Step Floating Catchment Area: A GIS-Based Method", name: "Hernandez, Luke Martin", level: "Undergraduate thesis" },
+    { year: "2023", title: "Design and Evaluation of a Web Application for Continuing Professional Development (CPD) for Registered Librarians in the Philippines", name: "Balaoro, Gerard Ian", level: "Undergraduate thesis" },
+    { year: "2022", title: "Development of the College of Science Digital Scholarship Commons with an Integrated Scholar Profile", name: "Emano, Judy Ann", level: "Graduate thesis", role: "Adviser" },
+    { year: "2019", title: "Design and Implementation of a Knowledge Base for the Office of the Vice Mayor of Marikina City's Covid-19 Efforts", name: "Santos, Patcheska Dewi", level: "Graduate thesis", role: "Adviser" },
+    { year: "2019", title: "Digitization of the DNA-Forensic Analysis Laboratory NSRI-UPD resource materials", name: "Viray, Dianne Angela", level: "Graduate thesis", role: "Adviser" },
+    { year: "2019", title: "Impact analysis of an Optical Character Recognition Enhanced Information Retrieval Tool using the combination of Task-Technology Fit Model, Technology Acceptance Model and Information System Success Model", name: "Surmieda, Janny", level: "Graduate thesis", role: "Adviser" },
+    { year: "2019", title: "Developing the library of Bagong Ilog Elementary School in Pasig City", name: "Silvestre, Camille Jol", level: "Graduate thesis", role: "Adviser" },
+    { year: "2019", title: "Project Lib: understanding how librarians in Metro Manila manage their projects", name: "Morana, Mark", level: "Graduate thesis", role: "Reader" },
+    { year: "2019", title: "The social return of investment method as a tool for valuation and impact assessment for libraries", name: "De Leon, Simon", level: "Graduate thesis", role: "Adviser" },
+    { year: "2019", title: "Implementation of Philsin College Foundation, Inc. Integrated Library System", name: "Cao, Danilyn", level: "Graduate thesis", role: "Reader" },
+    { year: "2019", title: "A study on the evaluation of university students on the information quality and credibility of online political information", name: "Sayana, Jethro", level: "Undergraduate thesis" },
+    { year: "2019", title: "Online information seeking behavior of Facebook's \"Free Data\" users in Barangay San Manuel and Barangay Citrus in San Jose Del Monte, Bulacan", name: "Bunao, Jessie Angeli", level: "Undergraduate thesis" },
+    { year: "2019", title: "An economic efficiency study of Radio Frequency Identification (RFID) System in Bangko Sentral ng Pilipinas (BSP) Library using net present value analysis", name: "Lagman, Jerome", level: "Undergraduate thesis" },
+    { year: "2018", title: "The development of a makerspace in Valeriano E. Fugoso Memorial Elementary School library", name: "Navarrete, Chiara Maye", level: "Graduate thesis", role: "Adviser" },
+    { year: "2018", title: "Microfiche digitization and retrieval process improvement for the human relations area files collection of the Rizal Library, Ateneo de Manila University", name: "Dela Cruz, Tommy", level: "Graduate thesis", role: "Adviser" },
+    { year: "2018", title: "Marist School integrated information literacy program (MaSInform Program): A study on the integration of library lessons and information literacy skills in a school's curriculum based on the fully integrated collaborative model of integrated curriculum", name: "Evangelista, Dia Marie", level: "Graduate thesis", role: "Reader" },
+    { year: "2018", title: "Design and implementation of EMRC web-based portal", name: "Mallo-Eustaquio, Geraldine", level: "Graduate thesis", role: "Reader" },
+    { year: "2017", title: "Library cafe as a service innovation: a case study on Tweedle Book Cafe as a third place", name: "Gali, Frances Andriette", level: "Undergraduate thesis" },
+    { year: "2017", title: "An exploratory study on the knowledge management practices of duly-recognized School of Library and Information Studies student organizations", name: "Luna, Adrian Philip", level: "Undergraduate thesis" },
+    { year: "2017", title: "A case study on the perception of selected Philippine librarians on the evolution of the library profession", name: "Laxamana, Mary Allyson Claude", level: "Undergraduate thesis" },
+    { year: "2017", title: "An exploratory study on online misinformation appraisal behavior of undergraduate students from the University of the Philippines Diliman", name: "Espina, Patricia Louise", level: "Undergraduate thesis" },
+    { year: "2017", title: "Warning! Graphic content: a study on the impact of infographics on attention, appeal, and recall and comprehension", name: "Espeleta, Jul Yan Marie", level: "Undergraduate thesis" },
+    { year: "2017", title: "Patterns of advice, trust and communication among the employees of the UP Main Library using Social Network Analysis (SNA)", name: "Bamba, Frederick", level: "Undergraduate thesis" },
+    { year: "2016", title: "An assessment of the knowledge management readiness of the benefits and gratuity claims unit of the AFP pension and gratuity management center with implications of implementing a knowledge management initiative", name: "Agcaoili, Andrea Jessica", level: "Undergraduate thesis" },
+    { year: "2016", title: "An economic valuation of the Quezon City Public Library - Main: a mixed methods approach on a total economic value framework", name: "Reyes, Dridge Paul", level: "Undergraduate thesis" },
+    { year: "2016", title: "Development of a prototype self-check system for the U.P. Diliman Main Library", name: "Ong, Joseph Carl", level: "Undergraduate thesis" },
+    { year: "2016", title: "An exploratory study on the open access policy of selected academic institutions: a case study", name: "Mercado, Nathaniel Jhon", level: "Undergraduate thesis" },
+    { year: "2016", title: "Estimating the social return of investment on the Marikina City Library using the contingent valuation method", name: "Guillen, Neil David", level: "Undergraduate thesis" },
+    { year: "2016", title: "Factors influencing the research productivity of library and information science (LIS) faculty in higher education institutions: an exploratory study", name: "Carreon, Alec Andrei", level: "Undergraduate thesis" },
+    { year: "2016", title: "An exploratory study on the factors that influenced Bachelor of Library and Information Science graduates on their choice of LIS specialization", name: "Cobico, Jazel Marianne", level: "Undergraduate thesis" },
+    { year: "2015", title: "A bibliometric analysis of undergraduate theses from the School of Library and Information Studies from 2010-2014: an exploratory study", name: "Balaquit, Jessica Patricia & Bugnosen, Marianne", level: "Undergraduate thesis" },
+    { year: "2015", title: "Design and implementation of an open source Android mobile barcode inventory software for the University of the Philippines Diliman School of Economics Library", name: "Miclat, John Ezekiel", level: "Undergraduate thesis" },
+    { year: "2015", title: "The reading interests and habits of Science curriculum students and Science high school students in Quezon City", name: "Guzman, Jamie G", level: "Undergraduate thesis" },
+    { year: "2015", title: "A case study on environmental factors affecting user traffic at the College of Arts and Letters Library", name: "Mararac, Caren Cyel", level: "Undergraduate thesis" },
+    { year: "2015", title: "The creation of a risk-based insurance policy for the print collection of the UP Main Library based on the risks of fire damage and factors leading to rebinding and replacement", name: "Ramirez, Jess Christian", level: "Undergraduate thesis" },
+    { year: "2015", title: "Using a GIS-based floating catchment method to assess the provision of library services within proximity of Quezon City Public Library branches", name: "Yague, Clifford", level: "Undergraduate thesis" },
+    { year: "2015", title: "An economic valuation of Marikina City Library using revealed preference methods", name: "Obal, Manilyn", level: "Undergraduate thesis" },
+    { year: "2015", title: "Using contingent valuation method in estimating the public benefits of the Marikina City Library", name: "Necesario, Roy Santos", level: "Undergraduate thesis" },
+    { year: "2014", title: "An explorative study on I.T. and systems librarianship focusing on competencies, tasks, and responsibilities in the library setting", name: "Cerdeno, Chris Gianni", level: "Undergraduate thesis" },
+    { year: "2014", title: "A proposed collection development policy and prototype integrated library system for the technical library and database center of Philippine Batteries Inc.", name: "Agnar, Aldus & Lacsamana, Roel Ellis", level: "Undergraduate thesis" },
+    { year: "2014", title: "Design and implementation of an Android mobile application prototype for the University of the Philippines College of Engineering Library", name: "Santos, Patcheska Dewi", level: "Undergraduate thesis" },
+    { year: "2014", title: "Use of infographics among selected libraries in Quezon City: an exploratory study", name: "Samson, Patricia", level: "Undergraduate thesis" },
+    { year: "2013", title: "Development of an SMS-based library querying system for the UP Integrated School Library", name: "Cadiz, Paolo Leandro", level: "Undergraduate thesis" },
+    { year: "2013", title: "A KOHA customization, migration, and training project for the Quezon City Public Library", name: "Corral, Valerie Darl & Piquero, Giancarlo", level: "Thesis or project entry" },
+    { year: "2013", title: "Development of a Prototype Integrated Library System (ILS) for selected public high school libraries in Quezon City", name: "Dela Cruz, Angelie & Pineda, Mark Elizier", level: "Undergraduate thesis" },
+    { year: "2012", title: "A proposed library programs for the implementation of a self-circulation system in the University of the Philippines Diliman Libraries", name: "Quindoza, Mark Lawrence", level: "Undergraduate thesis" },
+    { year: "2012", title: "Data envelopment analysis cost-efficiency: an approach to measuring library performance", name: "Gregorio, Jasper John", level: "Undergraduate thesis" }
+  ],
+  talks: [
+    { featured: true, date: "2025/11", year: "2025", title: "How AI Works / Survey of AI Tools Online", event: "AI in Education: Harnessing AI Tools to Empower Your Teaching", place: "Miriam College Lifelong Education and Development Center (LEAD), via Zoom" },
+    { featured: false, date: "2025/11", year: "2025", title: "AI and Data Analytics for Libraries", event: "WVSU-ULRC Reference Section", place: "Western Visayas State University, Iloilo City" },
+    { featured: false, date: "2025/11", year: "2025", title: "Artificial Intelligence (AI) as a Work Productivity Tool", event: "3rd PAGBA Quarterly Seminar cum Convention", place: "Iloilo Convention Center, Iloilo City" },
+    { featured: false, date: "2025/11", year: "2025", title: "Empowering Teaching and Learning through Artificial Intelligence and Library Resources", event: "In-Service Training Program for Teachers", place: "Canossa College SPC, San Pablo City, Laguna" },
+    { featured: true, date: "2025/10", year: "2025", title: "Empowering Librarians in the Age of AI", event: "PLAI-BRLC Seminar-Workshop and General Assembly", place: "University of Santo Tomas-Legazpi" },
+    { featured: true, date: "2025/10", year: "2025", title: "The Role of AI in Modern Library Services: A Strategic Analysis of the Philippine Experience", event: "AI and the Future of Education: Unveiling the Role of Artificial Intelligence in Education and Librarianship", place: "Universitas Pendidikan Indonesia Central Library, Indonesia" },
+    { featured: false, date: "2025/10", year: "2025", title: "Exploring How AI is Transforming Library Practices and Services", event: "Samahan ng mga Librarian sa Probinsya ng Laguna", place: "via Zoom" },
+    { featured: false, date: "2025/10", year: "2025", title: "Advancing Research with Artificial Intelligence", event: "Innovations, Ethical Trends, and Responsible Scientific Writing", place: "National University Laguna, Calamba City" },
+    { featured: false, date: "2025/10", year: "2025", title: "Exploring How AI is Transforming Libraries", event: "Batangas Libraries in the Age of Artificial Intelligence Seminar and General Assembly", place: "Librarians Association of Batangas" },
+    { featured: false, date: "2025/08", year: "2025", title: "TRAITH: The Transformative Role of Artificial Intelligence in Tourism and Hospitality", event: "Online Master Class on Research", place: "Council of Hotel and Restaurant Educators of the Philippines, via Zoom" },
+    { featured: false, date: "2025/07", year: "2025", title: "Integrating Artificial Intelligence and Virtual Reality in University of the Philippines Libraries: Enhancing Services and User Engagement", event: "Dalub-Aklat: The 2025 UP Librarians Conference", place: "UP Diliman" },
+    { featured: true, date: "2025/07", year: "2025", title: "Exploring Media Narratives on Tarsier Conservation and Tourism in Bohol: A Topic Modeling and Sentiment Analysis Approach to Agenda-Setting Theory", event: "Asia Pacific Tourism Association 2025 Conference", place: "Busan, South Korea" },
+    { featured: false, date: "2025/06", year: "2025", title: "AI for Libraries: Empowering UP Librarians with AI Fundamentals", event: "Library and Library Education Innovations in the Philippines: A Showcase of Best Practices, American Library Association Annual Conference 2025", place: "Philadelphia, USA" },
+    { featured: false, date: "2025/05", year: "2025", title: "Enhancing Writing Quality and Efficiency through AI Tools and Emerging AI Technologies", event: "Research, Publication, and Extension Celebration 2025", place: "College of Home Economics, UP Diliman" },
+    { featured: false, date: "2025/05", year: "2025", title: "Maximizing AI for Legislation: From Smart Prompts to Ethical Use", event: "Legislative engagement", place: "Batasang Pambansa Complex, Quezon City" },
+    { featured: false, date: "2025/03", year: "2025", title: "Artificial Intelligence (AI) Applications on Cultural Work", event: "NCR Museums Conference 2025", place: "Yuchengco Museum, Makati City" },
+    { featured: false, date: "2025/01", year: "2025", title: "AI for Libraries: Empowering UP Librarians with AI Fundamentals", event: "UP Libraries training session", place: "UP Diliman" },
+    { featured: false, date: "2024/12", year: "2024", title: "AI in LIS Education", event: "Capacity Building Seminar-Workshop for LIS Educators 2024", place: "UP SOLAIR, UP Diliman" },
+    { featured: false, date: "2024/12", year: "2024", title: "AI for the Future: Empowering NUTRINET Members with Artificial Intelligence Fundamentals", event: "Nutrition Research Information Network", place: "via Zoom" },
+    { featured: false, date: "2024/11", year: "2024", title: "AI in Academic Research: Tools for Student Success", event: "Academic research talk", place: "Far Eastern University Diliman" },
+    { featured: false, date: "2024/11", year: "2024", title: "Data Visualization using MS Excel", event: "Starbooks Regional Stakeholder in CALABARZON", place: "Calamba, Laguna" },
+    { featured: false, date: "2024/10", year: "2024", title: "AI in Education: What it means for us in UP", event: "14th UPLB CHEMAA General Assembly and Business Meeting", place: "University of the Philippines Los Banos" },
+    { featured: false, date: "2024/10", year: "2024", title: "Advance Topics and Emerging Trends in Digital Libraries", event: "Conference on Digital Librarianship", place: "San Fernando, Pampanga" },
+    { featured: true, date: "2024/07", year: "2024", title: "Information Theory Perspective on Mutual Information and Transfer Entropy in Tourism Analytics", event: "Asia Pacific Tourism Association Conference 2024", place: "Macau, China" },
+    { featured: false, date: "2024/06", year: "2024", title: "Panelist", event: "\"Fostering the 'I' in AI: Preparing and Adapting in an AI-Assisted World!\"", place: "SEAMEO INNOTECH, Quezon City" },
+    { featured: false, date: "2024/06", year: "2024", title: "Introduction to Semantic Web Technologies", event: "2024 SLIS Institute on Information Organization for Archives and Libraries", place: "UP SOLAIR, Quezon City" },
+    { featured: false, date: "2024/05", year: "2024", title: "Practical Applications of AI in Libraries", event: "Responsible Librarianship in the Midst of Emerging Artificial Intelligence, 2nd Librarians Summit", place: "Tuguegarao City, Cagayan" },
+    { featured: false, date: "2024/03", year: "2024", title: "AI and its Role in Philippine Academic Libraries", event: "2024 University Library Anniversary Lecture Series", place: "UP Diliman" },
+    { featured: true, date: "2023/12", year: "2023", title: "Bridging the Gap: UPSLIS as a Catalysts for Reproducible Research and Data Literacy", event: "A-LIEP 2023 Session 6, International Forum on Data, Information, and Knowledge for Resilient and Trustworthy Digital Societies", place: "National Taiwan Normal University Library" },
+    { featured: false, date: "2023/11", year: "2023", title: "From Closed Stacks to Open Data: Transforming LIS Research and Education", event: "CODHLIS Parallel Session, PLAI Congress 2023", place: "SMX Convention Center, Pampanga" },
+    { featured: true, date: "2023/11", year: "2023", title: "Exploring the Implications of ChatGPT and Generative AI in Transforming Pedagogy in Library and Information Science Education", event: "Council of Deans and Heads of LIS Schools Webinar and General Assembly", place: "Online" },
+    { featured: false, date: "2023/11", year: "2023", title: "Generative AI and Libraries", event: "LETS Libraries: Learning, Empowering, and Transforming Society Through Libraries", place: "DOST-STII, Taguig City" },
+    { featured: false, date: "2023/10", year: "2023", title: "Data Visualization in Microsoft Excel", event: "STARBOOKS Regional Stakeholders Convention", place: "Philippine Women's College of Davao" },
+    { featured: false, date: "2023/08", year: "2023", title: "Unleashing the Potential of Artificial Intelligence (AI) in the Workplace", event: "Deep Dive into AI Tools and Applications", place: "Legislative Library, Archives and Museum, House of Representatives" },
+    { featured: false, date: "2023/07", year: "2023", title: "Building a Strong Foundation: A Beginners Guide to Research Data Management", event: "Saliksik, Suri, at Sulat", place: "UP Diliman" },
+    { featured: false, date: "2023/06", year: "2023", title: "Panelist", event: "BEYOND THE SCREEN: Igniting Collective Action for a Digitally Empowered Society", place: "DigiReady PH Campus Edition" },
+    { featured: false, date: "2023/04", year: "2023", title: "Data Visualization in Excel", event: "11th Deployment Officers Assembly", place: "General Santos City" },
+    { featured: false, date: "2022/10", year: "2022", title: "Artificial Intelligence in Libraries: Applications and Possibilities", event: "ASLP 2022 National Congress", place: "Association of Special Libraries of the Philippines" },
+    { featured: false, date: "2022/07", year: "2022", title: "Digital Citizenship: Becoming a Responsible and Informed Recoletos", event: "In-Service Training 2022", place: "University of Negros Occidental - Recoletos" },
+    { featured: false, date: "2022/03", year: "2022", title: "How to Write a Good Literature Review", event: "UPGRADE 2022", place: "Library resources and research session" },
+    { featured: false, date: "2021/11", year: "2021", title: "Data Librarianship as an alternative career in the Philippines", event: "PLAI National Congress 2021 and General Assembly", place: "Online" },
+    { featured: false, date: "2021/11", year: "2021", title: "Skills Enhancement in IT (Databases and Software)", event: "Law Librarians as Agents of Change in Legal Education", place: "Information technology session" },
+    { featured: false, date: "2020/11", year: "2020", title: "Emerging Pedagogy During the Pandemic", event: "PLAI National Congress 2020 and General Assembly", place: "Online" },
+    { featured: false, date: "2020/07", year: "2020", title: "Managing Pandemic Stress and Anxiety for Librarians and Library Personnel", event: "\"Prepared Not Scared: Libraries Amidst COVID-19 Pandemic\" Webinar", place: "Online" },
+    { featured: false, date: "2019/07", year: "2019", title: "Game-Based Learning", event: "Continuing Advancement and Lifelong Learning", place: "University of the Assumption, San Fernando, Pampanga" },
+    { featured: false, date: "2019/06", year: "2019", title: "Overview of IR Platforms, Metadata Standards, and Open Access Repositories", event: "PAARLNET Convention 2019", place: "Rizal Library, Ateneo de Manila University" },
+    { featured: false, date: "2019/05", year: "2019", title: "Data Management Services: Collecting, Organizing, and Curating Datasets and Raw Data", event: "2019 ASLP Summer Conference", place: "Tagbilaran City, Bohol" },
+    { featured: false, date: "2019/05", year: "2019", title: "Data Privacy and Security", event: "30th National and 15th International SPC Educators' Congress", place: "St. Paul College Pasig" },
+    { featured: false, date: "2019/05", year: "2019", title: "Industry 4.0 Solutions for Smart Libraries", event: "11th CE-Logic National Electronic Conference", place: "Quezon City" },
+    { featured: false, date: "2019/04", year: "2019", title: "Computational Literacy for School Librarians", event: "PASLI 41st General Assembly and National Conference", place: "Manila" },
+    { featured: true, date: "2019/04", year: "2019", title: "Sexual Information Behavior of Filipino University Students", event: "Information in Contemporary Society, iConference 2019", place: "Washington, DC, USA" },
+    { featured: false, date: "2019/01", year: "2019", title: "LIS and the Digital Humanities", event: "LIS Congress 2019", place: "UP Diliman" },
+    { featured: false, date: "2018/12", year: "2018", title: "Reinventing Library Services for the Millennial", event: "Meeting the Needs of the Millennial", place: "UPLB Main Library" },
+    { featured: false, date: "2018/08", year: "2018", title: "An Economic Valuation of the Quezon City Public Library - Main: A Mixed Methods Approach on a Total Economic Value Framework", event: "IFLA World Library and Information Congress 2018, Access to Information Network - Africa (ATINA) Special Interest Group", place: "Kuala Lumpur, Malaysia" },
+    { featured: false, date: "2018/08", year: "2018", title: "Developing an Artificial Conversational Entity as a Virtual Library User Assistant", event: "IFLA Information Technology Section and Reference and Information Services Section Satellite Meeting", place: "University of Malaya Library, Kuala Lumpur, Malaysia" },
+    { featured: false, date: "2018/03", year: "2018", title: "Digital Humanities for Libraries", event: "UP Library 96th Anniversary Lecture Series", place: "UP Diliman" },
+    { featured: false, date: "2017/12", year: "2017", title: "Knowledge Management", event: "PIA Information Officers Conference", place: "Microtel Ayala Technohub" },
+    { featured: false, date: "2017/04", year: "2017", title: "Message, Marketing, and Media: Advocacy Marketing for Libraries, Archives, and Museums", event: "Advancing Libraries, Archives, and Museums 2017", place: "General Santos City" },
+    { featured: false, date: "2017/03", year: "2017", title: "Weaponized Disinformation: Statistics for Critical Thinking", event: "SLIS Lecture Series 2017", place: "Preservation Lecture Hall" },
+    { featured: false, date: "2016/04", year: "2016", title: "Open Content and Creative Commons", event: "Summer Institute on Technology in Education", place: "Miriam College" },
+    { featured: false, date: "2015/11", year: "2015", title: "Archives and Records Management Census in the Philippines: Initial Findings and Implications towards Agenda Setting for the Profession Developing a Professional Certificate Program for Archiving and Records Management in the Philippines", event: "4th National Archives Congress", place: "Vigan Convention Center, Ilocos Sur" },
+    { featured: false, date: "2015/10", year: "2015", title: "Augmented Library: AR Applications in Libraries", event: "LibHacks: Essential Apps to Empower Librarians and Information Professionals", place: "Tagaytay, Cavite" },
+    { featured: false, date: "2015/05", year: "2015", title: "Library System Solutions", event: "Optimizing Library Services: Technological Trends and Library Services Today", place: "Philippine Normal University" },
+    { featured: false, date: "2015/02", year: "2015", title: "Technology Innovations for LICs", event: "LIS Congress 2015", place: "Rizal Library, Ateneo de Manila University" },
+    { featured: false, date: "2014/10", year: "2014", title: "Technology Trends in Libraries", event: "UPSLIS Lecture Series", place: "UP School of Library and Information Studies" },
+    { featured: false, date: "2014/10", year: "2014", title: "Library System Solutions for One-person Libraries", event: "Libraries Without Walls: Technological Trends and Library Services in the Digital Age", place: "Alfonso, Cavite" },
+    { featured: false, date: "2014/07", year: "2014", title: "Accessing and Downloading Content - Developing Search Skills", event: "Electronic Resources in the Library", place: "University of the Philippines Main Library" },
+    { featured: false, date: "2013/06", year: "2013", title: "Web Harvesting", event: "Forum on Harvesting Online Resources and Cloud Computing, 41st ALAP General Assembly", place: "University of the Philippines Los Banos" }
+  ],
+  service: [
+    {
+      title: "Editorial and publishing roles",
+      items: [
+        {
+          dates: "2024",
+          role: "Member, Editorial Board",
+          organization: "PAARL Research Journal (PRJ) 2024"
+        },
+        {
+          dates: "2022 - 2023",
+          role: "Associate Editor",
+          organization: "Dunong: UP Diliman Journal of Student Research"
+        }
+      ]
+    },
+    {
+      title: "Student and professional organization leadership",
+      items: [
+        {
+          dates: "2023 - present",
+          role: "NSTP Coordinator - SLIS",
+          organization: "NSTP Diliman Office"
+        },
+        {
+          dates: "2022 - present",
+          role: "Organization Adviser",
+          organization: "UP Data Science Society"
+        },
+        {
+          dates: "2020 - present",
+          role: "Co-Founder and Co-Chair",
+          organization: "Data Librarians Special Interest Group"
+        },
+        {
+          dates: "2012 - present",
+          role: "Organization Adviser",
+          organization: "UP Library and Information Science Student Association"
+        }
+      ]
+    },
+    {
+      title: "Institutional and sector service",
+      items: [
+        {
+          dates: "2014",
+          role: "Committee member",
+          organization: "Commission on Higher Education Committee on Policies, Standards, and Guidelines for BLIS program requirements for academic libraries common to all programs"
+        }
+      ]
+    }
+  ]
+};
+
+</script>
+    <script>
+function renderHighlights() {
+  const container = document.getElementById("home-highlights");
+  const { highlights } = window.portfolioData;
+
+  container.innerHTML = highlights
+    .map(
+      (item) => `
+        <article class="highlight-card">
+          <h3>${item.title}</h3>
+          <p>${item.text}</p>
+        </article>
+      `
+    )
+    .join("");
+}
+
+function renderEducation() {
+  const container = document.getElementById("education-list");
+  const { education } = window.portfolioData;
+
+  container.innerHTML = education
+    .map(
+      (item) => `
+        <article class="list-item">
+          <p class="meta">${item.dates}</p>
+          <h4>${item.degree}</h4>
+          <p>${item.institution}</p>
+        </article>
+      `
+    )
+    .join("");
+}
+
+function renderResearchInterests() {
+  const container = document.getElementById("research-interest-list");
+  const { researchInterests } = window.portfolioData;
+
+  container.innerHTML = researchInterests
+    .map((item) => `<span class="chip">${item}</span>`)
+    .join("");
+}
+
+function renderSkills() {
+  const container = document.getElementById("skills-list");
+  const { skills } = window.portfolioData;
+
+  container.innerHTML = skills
+    .map(
+      (group) => `
+        <section class="skill-group">
+          <h4>${group.title}</h4>
+          <p>${group.items.join(", ")}</p>
+        </section>
+      `
+    )
+    .join("");
+}
+
+function renderAppointments() {
+  const container = document.getElementById("appointments-list");
+  const { appointments } = window.portfolioData;
+
+  container.innerHTML = appointments
+    .map(
+      (item) => `
+        <article class="timeline-item">
+          <p class="meta">${item.dates}</p>
+          <h4>${item.title}</h4>
+          <p>${item.organization}</p>
+          <p class="muted">${item.note}</p>
+        </article>
+      `
+    )
+    .join("");
+}
+
+function renderTeaching() {
+  const container = document.getElementById("teaching-groups");
+  const { teachingGroups } = window.portfolioData;
+
+  container.innerHTML = teachingGroups
+    .map(
+      (group) => `
+        <article class="teaching-card">
+          <div class="teaching-header">
+            <p class="meta">${group.theme}</p>
+          </div>
+          <div class="course-list">
+            ${group.courses
+              .map(
+                (course) => `
+                  <section class="course-item">
+                    <h3>${course.code}: ${course.title}</h3>
+                    <p>${course.description}</p>
+                  </section>
+                `
+              )
+              .join("")}
+          </div>
+        </article>
+      `
+    )
+    .join("");
+}
+
+function publicationMarkup(item, featured = false) {
+  return `
+    <article class="${featured ? "feature-card" : "publication-item"}">
+      <p class="meta">${item.year}</p>
+      <h3>${item.title}</h3>
+      <p>${item.venue}</p>
+      ${item.link ? `<p><a href="${item.link}">Open link</a></p>` : ""}
+    </article>
+  `;
+}
+
+function renderPublications() {
+  const featuredContainer = document.getElementById("featured-publications");
+  const listContainer = document.getElementById("publication-list");
+  const { publications } = window.portfolioData;
+
+  featuredContainer.innerHTML = publications
+    .filter((item) => item.featured)
+    .map((item) => publicationMarkup(item, true))
+    .join("");
+
+  listContainer.innerHTML = publications
+    .map((item) => publicationMarkup(item, false))
+    .join("");
+}
+
+function renderProjects() {
+  const container = document.getElementById("project-list");
+  const { projects } = window.portfolioData;
+
+  container.innerHTML = projects
+    .map(
+      (item) => `
+        <article class="project-card">
+          <p class="meta">${item.dates}</p>
+          <h3>${item.title}</h3>
+          <p>${item.funder}</p>
+          <p class="pill">${item.role}</p>
+        </article>
+      `
+    )
+    .join("");
+}
+
+function populateSelect(select, values, labelFormatter = (value) => value) {
+  values.forEach((value) => {
+    const option = document.createElement("option");
+    option.value = value;
+    option.textContent = labelFormatter(value);
+    select.appendChild(option);
+  });
+}
+
+function renderAdvising() {
+  const list = document.getElementById("advising-list");
+  const yearFilter = document.getElementById("advising-year-filter");
+  const levelFilter = document.getElementById("advising-level-filter");
+  const search = document.getElementById("advising-search");
+  const { advising } = window.portfolioData;
+
+  populateSelect(
+    yearFilter,
+    [...new Set(advising.map((item) => item.year))].sort((a, b) => b.localeCompare(a))
+  );
+  populateSelect(levelFilter, [...new Set(advising.map((item) => item.level))].sort());
+
+  function draw() {
+    const year = yearFilter.value;
+    const level = levelFilter.value;
+    const query = search.value.trim().toLowerCase();
+
+    const filtered = advising.filter((item) => {
+      const matchesYear = year === "all" || item.year === year;
+      const matchesLevel = level === "all" || item.level === level;
+      const haystack = `${item.title} ${item.name} ${item.level} ${item.role || ""}`.toLowerCase();
+      const matchesQuery = !query || haystack.includes(query);
+      return matchesYear && matchesLevel && matchesQuery;
+    });
+
+    list.innerHTML = filtered
+      .map(
+        (item) => `
+          <article class="advising-card">
+            <div class="tag-row">
+              <span class="chip">${item.year}</span>
+              <span class="chip">${item.level}</span>
+              ${item.role ? `<span class="chip">${item.role}</span>` : ""}
+            </div>
+            <h3>${item.title}</h3>
+            <p>${item.name}</p>
+          </article>
+        `
+      )
+      .join("");
+  }
+
+  yearFilter.addEventListener("change", draw);
+  levelFilter.addEventListener("change", draw);
+  search.addEventListener("input", draw);
+  draw();
+}
+
+function talkMarkup(item, featured = false) {
+  return `
+    <article class="${featured ? "feature-card" : "talk-item"}">
+      <p class="meta">${item.date}</p>
+      <h3>${item.title}</h3>
+      <p>${item.event}</p>
+      <p class="muted">${item.place}</p>
+    </article>
+  `;
+}
+
+function renderTalks() {
+  const featuredContainer = document.getElementById("featured-talks");
+  const list = document.getElementById("talk-list");
+  const yearFilter = document.getElementById("talk-year-filter");
+  const search = document.getElementById("talk-search");
+  const { talks } = window.portfolioData;
+
+  featuredContainer.innerHTML = talks
+    .filter((item) => item.featured)
+    .slice(0, 6)
+    .map((item) => talkMarkup(item, true))
+    .join("");
+
+  populateSelect(
+    yearFilter,
+    [...new Set(talks.map((item) => item.year))].sort((a, b) => b.localeCompare(a))
+  );
+
+  function draw() {
+    const year = yearFilter.value;
+    const query = search.value.trim().toLowerCase();
+
+    const filtered = talks.filter((item) => {
+      const matchesYear = year === "all" || item.year === year;
+      const haystack = `${item.title} ${item.event} ${item.place}`.toLowerCase();
+      const matchesQuery = !query || haystack.includes(query);
+      return matchesYear && matchesQuery;
+    });
+
+    list.innerHTML = filtered.map((item) => talkMarkup(item)).join("");
+  }
+
+  yearFilter.addEventListener("change", draw);
+  search.addEventListener("input", draw);
+  draw();
+}
+
+function renderService() {
+  const container = document.getElementById("service-list");
+  const { service } = window.portfolioData;
+
+  container.innerHTML = service
+    .map(
+      (group) => `
+        <article class="service-card">
+          <h3>${group.title}</h3>
+          <div class="service-items">
+            ${group.items
+              .map(
+                (item) => `
+                  <section class="service-item">
+                    <p class="meta">${item.dates}</p>
+                    <h4>${item.role}</h4>
+                    <p>${item.organization}</p>
+                  </section>
+                `
+              )
+              .join("")}
+          </div>
+        </article>
+      `
+    )
+    .join("");
+}
+
+function setupMenu() {
+  const button = document.querySelector(".menu-toggle");
+  const nav = document.getElementById("site-nav");
+
+  button.addEventListener("click", () => {
+    const expanded = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", String(!expanded));
+    nav.classList.toggle("is-open", !expanded);
+  });
+
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      button.setAttribute("aria-expanded", "false");
+      nav.classList.remove("is-open");
+    });
+  });
+}
+
+function setupActiveNav() {
+  const sections = document.querySelectorAll("main section[id]");
+  const navLinks = Array.from(document.querySelectorAll(".site-nav a[href^='#']"));
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        navLinks.forEach((link) => {
+          const isCurrent = link.getAttribute("href") === `#${entry.target.id}`;
+          link.classList.toggle("is-current", isCurrent);
+        });
+      });
+    },
+    { rootMargin: "-40% 0px -45% 0px", threshold: 0.1 }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderHighlights();
+  renderEducation();
+  renderResearchInterests();
+  renderSkills();
+  renderAppointments();
+  renderTeaching();
+  renderPublications();
+  renderProjects();
+  renderAdvising();
+  renderTalks();
+  renderService();
+  setupMenu();
+  setupActiveNav();
+});
+
+</script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="container header-shell">
+        <a class="brand" href="#home" aria-label="Dan Anthony Dorado home">
+          <span class="brand-mark">DAD</span>
+          <span class="brand-text">
+            <strong>Dan Anthony Dorado</strong>
+            <span>Academic portfolio</span>
+          </span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          Menu
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#research">Research</a>
+          <a href="#projects">Projects</a>
+          <a href="#advising">Advising</a>
+          <a href="#talks">Talks</a>
+          <a href="#service">Service</a>
+          <a href="#contact">Contact</a>
+          <a class="nav-cta" href="download_resume.pdf">Download CV</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero section" id="home">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="hero-media" aria-label="Selected image">
+              <figure class="hero-photo-card hero-photo-single">
+                <img src="images/MOMO_1769504964328.jpg" alt="Dan Anthony Dorado portrait">
+              </figure>
+            </div>
+            <p class="lead">
+              Assistant Professor at the UP School of Library and Information Studies, working
+              across computational methods, open education, critical data studies, radical
+              statistics, AI in libraries, tourism analytics, and data science.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="download_resume.pdf">Download CV</a>
+              <a class="button button-secondary" href="#research">View publications</a>
+            </div>
+
+            <ul class="quick-links" aria-label="Professional links">
+              <li><a href="mailto:dddorado@up.edu.ph">Email</a></li>
+              <li><a href="https://orcid.org/0000-0002-2844-0732">ORCID</a></li>
+              <li><a href="https://github.com/dddorado">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/dan-anthony-dorado-a9935140/">LinkedIn</a></li>
+              <li><a href="http://dandorado.net">Website</a></li>
+              <li><a href="https://x.com/danddorado">X</a></li>
+              <li><a href="https://www.youtube.com/@dddorado/">YouTube</a></li>
+            </ul>
+          </div>
+
+          <aside class="hero-panel" aria-label="Current profile">
+            <h3>Dan Anthony D. Dorado</h3>
+            <div class="panel-block">
+              <p class="panel-label">Current role</p>
+              <p class="panel-value">Assistant Professor, UP School of Library and Information Studies</p>
+            </div>
+            <div class="panel-block">
+              <p class="panel-label">Academic trajectory</p>
+              <p class="panel-value">PhD in Data Science (ongoing), University of the Philippines Diliman</p>
+            </div>
+            <div class="panel-block">
+              <p class="panel-label">Institutional base</p>
+              <p class="panel-value">University of the Philippines Diliman</p>
+            </div>
+            <div class="panel-block">
+              <p class="panel-label">Research communities</p>
+              <p class="panel-value">Sync.Bio.Optics laboratory and the Publics, Archives, and Data (PANDA) Lab</p>
+            </div>
+            <div class="panel-block">
+              <p class="panel-label">Location</p>
+              <p class="panel-value">San Pablo City, Laguna, Philippines</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section-alt" aria-labelledby="selected-work-title">
+        <div class="container">
+          <div class="section-heading compact">
+            <p class="eyebrow">Overview</p>
+            <h2 id="selected-work-title">Selected areas of work</h2>
+          </div>
+          <div class="highlight-grid" id="home-highlights"></div>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">About</p>
+            <h2 id="about-title">Academic profile</h2>
+            <p>
+              Dan Anthony Dorado is a full-time faculty member at the UP School of Library and
+              Information Studies. His work connects library and information science with
+              quantitative methods, digital scholarship, information systems, and public-facing
+              academic engagement.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <article class="card prose-card">
+              <h3>Biography</h3>
+              <p>
+                At UP SLIS, he teaches information technology, management and marketing,
+                research methodology, and quantitative research. He previously served as Director
+                of the Diliman Learning Resource Center under the Office of the Vice Chancellor
+                for Student Affairs and, before joining the faculty, worked as Information
+                Specialist at the UP College of Engineering Library with responsibility for system
+                and network administration and The Learning Commons.
+              </p>
+              <p>
+                He completed his Master of Technology Management at UP Diliman and is currently
+                pursuing a PhD in Data Science. His research specialization, as described in the
+                resume, covers computational methods, open education, critical data studies, and
+                radical statistics, with related work in AI in libraries, tourism analytics,
+                digital humanities, and research data management.
+              </p>
+            </article>
+
+            <div class="stack">
+              <article class="card">
+                <h3>Education</h3>
+                <div id="education-list"></div>
+              </article>
+
+              <article class="card">
+                <h3>Research interests</h3>
+                <div class="chip-list" id="research-interest-list"></div>
+              </article>
+
+              <article class="card">
+                <h3>Skills</h3>
+                <div class="skill-groups" id="skills-list"></div>
+              </article>
+            </div>
+          </div>
+
+          <article class="card appointments-card">
+            <h3>Professional appointments</h3>
+            <div class="timeline-list" id="appointments-list"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="teaching" aria-labelledby="teaching-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Teaching</p>
+            <h2 id="teaching-title">Courses taught</h2>
+            <p>
+              Courses are grouped thematically to make the range of teaching legible across
+              information technology, management, research methods, digital scholarship, and civic
+              engagement.
+            </p>
+          </div>
+          <div class="teaching-groups" id="teaching-groups"></div>
+        </div>
+      </section>
+
+      <section class="section" id="research" aria-labelledby="research-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Research and Publications</p>
+            <h2 id="research-title">Publications and scholarly output</h2>
+            <p>
+              Featured items foreground recent work and recurring research themes. The complete
+              list below reflects the publications section of the resume.
+            </p>
+          </div>
+
+          <div class="feature-grid" id="featured-publications"></div>
+
+          <article class="list-shell">
+            <div class="subheading">
+              <h3>Full publication list</h3>
+            </div>
+            <div class="publication-list" id="publication-list"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Projects and Grants</p>
+            <h2 id="projects-title">Funded and formal projects</h2>
+            <p>
+              Projects are presented as substantial academic and institutional work, with dates,
+              roles, and funding bodies retained from the resume.
+            </p>
+          </div>
+          <div class="project-grid" id="project-list"></div>
+        </div>
+      </section>
+
+      <section class="section" id="advising" aria-labelledby="advising-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Advising and Mentorship</p>
+            <h2 id="advising-title">Thesis advising and reading</h2>
+            <p>
+              The list below keeps the names, topics, degree levels, and adviser or reader roles
+              where they are stated in the resume.
+            </p>
+          </div>
+
+          <div class="toolbar" aria-label="Advising filters">
+            <label>
+              <span>Year</span>
+              <select id="advising-year-filter">
+                <option value="all">All years</option>
+              </select>
+            </label>
+            <label>
+              <span>Level</span>
+              <select id="advising-level-filter">
+                <option value="all">All levels</option>
+              </select>
+            </label>
+            <label class="search-field">
+              <span>Search</span>
+              <input id="advising-search" type="search" placeholder="Topic or student name">
+            </label>
+          </div>
+
+          <div class="advising-list" id="advising-list"></div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="talks" aria-labelledby="talks-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Talks, Presentations, and Engagements</p>
+            <h2 id="talks-title">Selected and chronological engagements</h2>
+            <p>
+              This section highlights invited talks and conference presentations spanning AI,
+              libraries, education, tourism analytics, digital humanities, and research methods.
+            </p>
+          </div>
+
+          <div class="feature-grid" id="featured-talks"></div>
+
+          <div class="toolbar" aria-label="Talk filters">
+            <label>
+              <span>Year</span>
+              <select id="talk-year-filter">
+                <option value="all">All years</option>
+              </select>
+            </label>
+            <label class="search-field">
+              <span>Search</span>
+              <input id="talk-search" type="search" placeholder="Title, event, or place">
+            </label>
+          </div>
+
+          <div class="talk-list" id="talk-list"></div>
+        </div>
+      </section>
+
+      <section class="section" id="service" aria-labelledby="service-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Service and Leadership</p>
+            <h2 id="service-title">Editorial, student, and institutional roles</h2>
+            <p>
+              Service roles emphasize academic citizenship, organizational leadership, program
+              stewardship, and participation in professional communities.
+            </p>
+          </div>
+
+          <div class="service-groups" id="service-list"></div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Contact</p>
+            <h2 id="contact-title">Get in touch</h2>
+            <p>
+              For research collaboration, speaking invitations, teaching engagements, and
+              professional inquiries, the institutional email below is the best first contact.
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <div>
+              <h3>Professional contact</h3>
+              <p><a href="mailto:dddorado@up.edu.ph">dddorado@up.edu.ph</a></p>
+              <p>UP School of Library and Information Studies</p>
+              <p>University of the Philippines Diliman</p>
+              <p>San Pablo City, Laguna, Philippines</p>
+            </div>
+
+            <div>
+              <h3>External profiles</h3>
+              <ul class="contact-links">
+                <li><a href="https://orcid.org/0000-0002-2844-0732">ORCID</a></li>
+                <li><a href="https://github.com/dddorado">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/dan-anthony-dorado-a9935140/">LinkedIn</a></li>
+                <li><a href="http://dandorado.net">Website</a></li>
+                <li><a href="https://x.com/danddorado">X</a></li>
+                <li><a href="https://www.youtube.com/@dddorado/">YouTube</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="footer-title">Dan Anthony Dorado</p>
+          <p>
+            Academic portfolio for teaching, research, advising, and public engagement in library
+            and information science.
+          </p>
+        </div>
+        <div>
+          <p class="footer-title">Quick links</p>
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#talks">Talks</a></li>
+            <li><a href="download_resume.pdf">Download CV</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <noscript>
+      <div class="noscript-note">
+        JavaScript is used to render the full CV lists and filters on this page.
+      </div>
+    </noscript>
+  </body>
+</html>
