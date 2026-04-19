@@ -2,11 +2,15 @@
 
 This repository contains a GitHub Pages-ready personal academic website for Dan Anthony Dorado. The site is built directly from the contents of `download_resume.pdf` and presents teaching, research, publications, projects, advising, talks, service, and contact information in a clean static structure.
 
+An editable Markdown reference, `wiki.md`, is also included as a working resume mirror. When `wiki.md` is updated, the corresponding content in `index.html` should be updated as well.
+
+A GitHub Actions workflow now supports that sync automatically: pushing a change to `wiki.md` on `main` runs the repo sync script and commits the refreshed `index.html` back to the branch.
+
 ## Project overview
 
 - Static single-page academic portfolio built with HTML, CSS, and vanilla JavaScript
 - GitHub Pages compatible with no build step required
-- CV-heavy sections are stored in `assets/js/content.js` for easier maintenance
+- CV-heavy sections are currently rendered from JavaScript data blocks embedded in `index.html`
 - Long sections such as talks and advising include lightweight client-side filters for readability
 
 ## Folder structure
@@ -14,6 +18,7 @@ This repository contains a GitHub Pages-ready personal academic website for Dan 
 ```text
 Website/
 |-- index.html
+|-- wiki.md
 |-- download_resume.pdf
 |-- assets/
 |   |-- css/
@@ -81,17 +86,15 @@ Because asset paths are relative, the site will work correctly when hosted at th
 
 ## How to update sections later
 
-Most content updates happen in `assets/js/content.js`.
+Use `wiki.md` as the working Markdown reference for resume content, then mirror those edits into `index.html` so the published website stays aligned.
 
-- Update biography or static introductory text in `index.html`
-- Add or edit publications in the `publications` array
-- Add new projects in the `projects` array
-- Add new talks in the `talks` array
-- Add new thesis records in the `advising` array
-- Adjust styling in `assets/css/styles.css`
-- Extend interactions in `assets/js/site.js`
+- Update profile, biography, appointments, talks, publications, advising, projects, or service first in `wiki.md`
+- Keep the existing `##` and `###` section headings in `wiki.md` so the sync script can parse it reliably
+- Pushing `wiki.md` to `main` triggers the workflow that refreshes `index.html`
+- Adjust styling in `assets/css/styles.css` if the presentation needs to change
+- Extend interactions in `assets/js/site.js` only if filters or behaviors need to change
 
-For content additions, follow the same object structure already used in the arrays.
+For content additions on the site, follow the same object structure already used in the JavaScript data blocks embedded in `index.html`.
 
 ## Design rationale
 
